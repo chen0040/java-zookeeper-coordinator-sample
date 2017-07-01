@@ -35,13 +35,12 @@ public class RequestController {
 
       NodeUri node = uris.get(0);
 
-      String url = node.getHost() + "/hello";
+      String url = "http://" + node.getHost() + ":" + node.getPort() + "/hello";
 
-      return url;
 
-      /*
+
       ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
 
-      return response.getBody();*/
+      return response.getBody();
    }
 }

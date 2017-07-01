@@ -27,6 +27,8 @@ public class RequestServer extends RequestNode {
 
    @Override public void startSystem(String ipAddress, int port, String masterId){
       logger.info("start system at {}:{} with id = {}", ipAddress, port, masterId);
+
+      port(port);
    }
 
    @Override public void stopSystem() {
@@ -43,7 +45,6 @@ public class RequestServer extends RequestNode {
       application.addShutdownHook();
       application.start();
 
-      port(IpTools.getNextAvailablePort(startingPort));
       get("/hello", (req, res) -> "Hello World");
 
 

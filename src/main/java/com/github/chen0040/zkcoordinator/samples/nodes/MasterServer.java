@@ -34,7 +34,7 @@ public class MasterServer extends MasterNode {
 
    @Override public void startSystem(String ipAddress, int port, String masterId){
       logger.info("start system at {}:{} with id = {}", ipAddress, port, masterId);
-
+      port(port);
    }
 
    @Override public void stopSystem() {
@@ -52,7 +52,7 @@ public class MasterServer extends MasterNode {
       application.addShutdownHook();
       application.start();
 
-      port(IpTools.getNextAvailablePort(startingPort));
+
       get("/hello", (req, res) -> "Hello World");
 
    }
