@@ -13,7 +13,7 @@
     <licenses>
         <license>
             <name>MIT</name>
-            <url>https://github.com/chen0040/java-zookeeper-coordinator/blob/master/LICENSE</url>
+            <url>https://github.com/chen0040/java-zookeeper-coordinator-sample/blob/master/LICENSE</url>
             <comments>MIT License</comments>
         </license>
     </licenses>
@@ -28,20 +28,20 @@
     </developers>
 
     <scm>
-        <url>https://github.com/chen0040/java-zookeeper-coordinator</url>
-        <connection>scm:git:git://github.com/chen0040/java-zookeeper-coordinator.git</connection>
-        <developerConnection>scm:git:git@github.com:chen0040/java-zookeeper-coordinator.git</developerConnection>
+        <url>https://github.com/chen0040/java-zookeeper-coordinator-sample</url>
+        <connection>scm:git:git://github.com/chen0040/java-zookeeper-coordinator-sample.git</connection>
+        <developerConnection>scm:git:git@github.com:chen0040/java-zookeeper-coordinator-sample.git</developerConnection>
     </scm>
 
     <issueManagement>
-        <url>https://github.com/chen0040/java-zookeeper-coordinator/issues</url>
+        <url>https://github.com/chen0040/java-zookeeper-coordinator-sample/issues</url>
         <system>GitHub Issues</system>
     </issueManagement>
 
 
     <name>Sample Code for Zookeeper Coordinator Framework in Java</name>
     <description>Sample Code of Zookeeper Coordinator for master-slave cluster setup via Zookeeper</description>
-    <url>https://github.com/chen0040/java-zookeeper-coordinator</url>
+    <url>https://github.com/chen0040/java-zookeeper-coordinator-sample</url>
 
 
 
