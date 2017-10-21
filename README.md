@@ -44,5 +44,10 @@ The above commands start two master nodes, two producer nodes and two worker nod
 
 Now navigate to localhost:8080 to interact with the client-application.
 
+A simple way to check whether the cluster is working is to invoke the following url
 
+http://localhost:8080/requests/hello
+
+This will command client-application to invoke any producer node in the cluster which in turn will invoke any master node in the 
+ cluster which in turn will create and assign a "hello-task" to one of the workers in the cluster.
 

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.Random;
 
 
 /**
@@ -25,22 +26,26 @@ public class RequestController {
    @Autowired
    private RestTemplate restTemplate;
 
+   private Random random = new Random();
+
    @RequestMapping(value = "/requests/hello", method = RequestMethod.GET)
    public @ResponseBody String hello(){
-      List<NodeUri> uris = node.getProducers();
+      List<NodeUri> producers = node.getProducers();
 
-      if(uris.isEmpty()){
-         return "No Request Node Available!";
+      if(producers.isEmpty()){
+         return "No Producer Node Available!";
       }
 
-      NodeUri node = uris.get(0);
+      NodeUri node = producers.get(random.nextInt(producers.size()));
 
       String url = "http://" + node.getHost() + ":" + node.getPort() + "/hello";
 
-
-
       ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
 
-      return response.getBody();
+      StringBuilder sb = new StringBuilder();
+      sb.append("client-application is trying to invoke a producer at " + url);
+      sb.append("<br />");
+      sb.append(response.getBody());
+      return sb.toString();
    }
 }
