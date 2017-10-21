@@ -40,7 +40,13 @@ java -jar bin/worker-node.jar
 java -jar bin/client-application.jar
 ```
 
-The above commands start two master nodes, two producer nodes and two worker nodes, as well as one client-application
+The above commands start two master nodes, two producer nodes and two worker nodes, as well as one client-application.
+
+* the zookeeper-standalone runs at localhost:2181 (client port) and localhost:4181 (web api port)
+* the client-application is a Spring Boot web application running at localhost:8080.
+* the two master nodes runs at any port available starting at port 6000
+* the two producer nodes runs at any port available starting at port 7000
+* the two worker nodes runs at any port available starting at port 9000
 
 Now navigate to localhost:8080 to interact with the client-application.
 
