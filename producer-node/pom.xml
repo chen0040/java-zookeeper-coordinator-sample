@@ -49,7 +49,7 @@
 
     <build>
 
-        <finalName>java-mariadb-standalone-server</finalName>
+        <finalName>producer-node</finalName>
 
         <plugins>
 

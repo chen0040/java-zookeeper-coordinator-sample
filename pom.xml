@@ -133,14 +133,9 @@
 
         <lombok.version>1.16.6</lombok.version>
 
-        <spring-boot-maven-plugin.version>1.4.1.RELEASE</spring-boot-maven-plugin.version>
+
     </properties>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.1.RELEASE</version>
-    </parent>
 
     <profiles>
 
